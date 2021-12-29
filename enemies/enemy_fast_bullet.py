@@ -5,7 +5,7 @@ import utils
 class EnemyFastBullet(pygame.sprite.Sprite):
     def __init__(self, enemy_fast_rect):
         super(EnemyFastBullet, self).__init__()
-        self.image = pygame.image.load("assets/sprites/space-bullets/enemy-fast-bullet.png").convert_alpha()
+        self.image = pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/space-bullets/enemy-fast-bullet.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.centerx = enemy_fast_rect.centerx
         self.rect.centery = enemy_fast_rect.centery

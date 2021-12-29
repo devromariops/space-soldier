@@ -5,19 +5,19 @@ import utils
 
 class Background:
     def __init__(self):
-        self.background = pygame.image.load("assets/sprites/stars-nebulae/blackspace-background.png").convert()
+        self.background = pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/stars-nebulae/blackspace-background.png").convert()
 
-        self.stars_surfaces = [pygame.image.load("assets/sprites/stars-nebulae/stars.png").convert_alpha(),
-                               pygame.image.load("assets/sprites/stars-nebulae/stars.png").convert_alpha()]
+        self.stars_surfaces = [pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/stars-nebulae/stars.png").convert_alpha(),
+                               pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/stars-nebulae/stars.png").convert_alpha()]
 
         self.stars = []
         for surface in self.stars_surfaces:
             self.stars.append([surface, surface.get_rect()])
 
         self.nebulae_surfaces = [
-            pygame.image.load("assets/sprites/stars-nebulae/nebula1.png").convert_alpha(),
-            pygame.image.load("assets/sprites/stars-nebulae/nebula2.png").convert_alpha(),
-            pygame.image.load("assets/sprites/stars-nebulae/nebula3.png").convert_alpha()
+            pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/stars-nebulae/nebula1.png").convert_alpha(),
+            pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/stars-nebulae/nebula2.png").convert_alpha(),
+            pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/stars-nebulae/nebula3.png").convert_alpha()
         ]
         self.nebulae = []
         for surface in self.nebulae_surfaces:

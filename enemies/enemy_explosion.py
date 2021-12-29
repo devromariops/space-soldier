@@ -1,12 +1,12 @@
 import pygame
-
+import utils
 
 class EnemyExlosion(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super(EnemyExlosion, self).__init__()
         self.sprites = []
         for _ in range(1, 16):
-            file_name = "assets/sprites/enemy-explosion/{}.png".format(_)
+            file_name = utils.ABSOLUT_PATH + "assets/sprites/enemy-explosion/{}.png".format(_)
             self.sprites.append(pygame.image.load(file_name).convert_alpha())
 
         self.atual_sprite = 0
