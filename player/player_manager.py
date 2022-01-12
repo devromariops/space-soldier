@@ -1,6 +1,6 @@
 import pygame
 from .player import Player
-import utils
+
 
 class PlayerManager:
     def __init__(self):
@@ -50,7 +50,7 @@ class PlayerManager:
     def destroy(self, enemies, enemy_bullets):
         if pygame.sprite.groupcollide(self.player_group, enemies, True, True) or \
                 pygame.sprite.groupcollide(self.player_group, enemy_bullets, True, True):
-                death = pygame.mixer.Sound(utils.ABSOLUT_PATH + "assets/sounds/player_death.mp3")
+                death = pygame.mixer.Sound("assets/sounds/player_death.mp3")
                 death.play()
                 return True
         return False

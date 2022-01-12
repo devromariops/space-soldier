@@ -1,12 +1,11 @@
 import pygame
-import utils
 
 
 class Target(pygame.sprite.Group):
     def __init__(self):
         super(Target, self).__init__()
-        self.target_surfaces = [pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/targets/target-circle.png"),
-                                pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/targets/target-tri.png")]
+        self.target_surfaces = [pygame.image.load("assets/sprites/targets/target-circle.png"),
+                                pygame.image.load("assets/sprites/targets/target-tri.png")]
 
         self.targets = []
         for surface in self.target_surfaces:

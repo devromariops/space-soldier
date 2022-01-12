@@ -6,4 +6,5 @@
  If you don't have pyinstaller
  pip install pyinstaller
 
- pyinstaller space_soldier.py --onefile --windowed --noconsole
+ 
+ pyinstaller --onefile --windowed space_soldier.spec

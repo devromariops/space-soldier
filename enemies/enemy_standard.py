@@ -6,7 +6,7 @@ from enemies.enemy_standard_bullet import EnemyStandardBullet
 class EnemyStandard(pygame.sprite.Sprite):
     def __init__(self, midbottom_x, midbottom_y):
         super(EnemyStandard, self).__init__()
-        self.image = pygame.image.load(utils.ABSOLUT_PATH + "assets/sprites/space-ships/enemy-standard.png").convert_alpha()
+        self.image = pygame.image.load("assets/sprites/space-ships/enemy-standard.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.midbottom = (midbottom_x, midbottom_y)
         self.velocity = 5
