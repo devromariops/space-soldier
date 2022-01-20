@@ -1,4 +1,5 @@
 import pygame
+import os
 
 
 class EnemyExlosion(pygame.sprite.Sprite):
@@ -6,7 +7,7 @@ class EnemyExlosion(pygame.sprite.Sprite):
         super(EnemyExlosion, self).__init__()
         self.sprites = []
         for _ in range(1, 17):
-            file_name = f"assets/sprites/enemy-explosion/{_}.png"
+            file_name = os.path.join('assets', 'sprites', 'enemy-explosion',f'{_}.png')
             self.sprites.append(pygame.image.load(file_name).convert_alpha())
 
         self.atual_sprite = 0

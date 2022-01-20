@@ -1,12 +1,16 @@
 import pygame
+import os
+
 import utils
 from enemies.enemy_standard_bullet import EnemyStandardBullet
+
+image_enemy_standard_path = os.path.join('assets', 'sprites', 'space-ships', 'enemy-standard.png')
 
 
 class EnemyStandard(pygame.sprite.Sprite):
     def __init__(self, midbottom_x, midbottom_y):
         super(EnemyStandard, self).__init__()
-        self.image = pygame.image.load("assets/sprites/space-ships/enemy-standard.png").convert_alpha()
+        self.image = pygame.image.load(image_enemy_standard_path).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.midbottom = (midbottom_x, midbottom_y)
         self.velocity = 5

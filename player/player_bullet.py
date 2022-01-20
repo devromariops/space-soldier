@@ -1,10 +1,13 @@
 import pygame
+import os
+
+image_bullet_standard_path = os.path.join('assets', 'sprites', 'space-bullets', 'player-bullet-standard.png')
 
 
 class PlayerBullet(pygame.sprite.Sprite):
     def __init__(self, player_rect, posx):
         super(PlayerBullet, self).__init__()
-        self.image = pygame.image.load("assets/sprites/space-bullets/player-bullet-standard.png").convert_alpha()
+        self.image = pygame.image.load(image_bullet_standard_path).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.centerx = player_rect.centerx + posx
         self.rect.centery = player_rect.centery

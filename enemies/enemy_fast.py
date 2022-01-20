@@ -1,13 +1,17 @@
 import pygame
 import random
+import os
+
 import utils
 from .enemy_fast_bullet import EnemyFastBullet
+
+image_enemy_speed_path = os.path.join('assets', 'sprites', 'space-ships', 'enemy-speed.png')
 
 
 class EnemyFast(pygame.sprite.Sprite):
     def __init__(self, midbottom_x, midbottom_y):
         super(EnemyFast, self).__init__()
-        self.image = pygame.image.load("assets/sprites/space-ships/enemy-speed.png").convert_alpha()
+        self.image = pygame.image.load(image_enemy_speed_path).convert_alpha()
         self.rect = self.image.get_rect()
         self.size = self.image.get_size()
         self.rect.midbottom = (midbottom_x, midbottom_y)

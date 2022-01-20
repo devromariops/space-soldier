@@ -1,8 +1,12 @@
 import random
 import pygame
+import os
+
 from .enemy_standard import EnemyStandard
 from .enemy_fast import EnemyFast
 from .enemy_explosion import EnemyExlosion
+
+sound_enemy_death_path = os.path.join('assets', 'sounds', 'enemy_death.mp3')
 
 
 class EnemiesManager:
@@ -61,7 +65,7 @@ class EnemiesManager:
         self.explosion_group.update(screen_surface)
 
         if enemy_defeated:
-            defeated = pygame.mixer.Sound("assets/sounds/enemy_death.mp3")
+            defeated = pygame.mixer.Sound(sound_enemy_death_path)
             defeated.play()
             return 1
         return 0

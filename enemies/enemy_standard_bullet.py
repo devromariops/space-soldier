@@ -1,11 +1,15 @@
 import pygame
+import os
+
 import utils
+
+image_enemy_standard_bullet_path = os.path.join('assets', 'sprites', 'space-bullets', 'enemy-standard-bullet.png')
 
 
 class EnemyStandardBullet(pygame.sprite.Sprite):
     def __init__(self, enemy_stanard_rect, posx):
         super(EnemyStandardBullet, self).__init__()
-        self.image = pygame.image.load("assets/sprites/space-bullets/enemy-standard-bullet.png").convert_alpha()
+        self.image = pygame.image.load(image_enemy_standard_bullet_path).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.centerx = enemy_stanard_rect.centerx + posx
         self.rect.centery = enemy_stanard_rect.centery

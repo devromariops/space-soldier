@@ -15,11 +15,14 @@ import pygame
 from pygame.time import Clock
 from pygame.locals import *
 import sys
+import os
+
 import utils
 from background import Background
 from enemies.enemies_manager import EnemiesManager
 from player.player_manager import PlayerManager
 from target import Target
+
 
 
 pygame.init()
@@ -28,6 +31,8 @@ FPS = 30
 clock = Clock()
 SCREEN_SURFACE = pygame.display.set_mode((utils.SCREEN_WIDTH, utils.SCREEN_HEIGHT))
 pygame.display.set_caption("Space Soldier")
+
+font_path = os.path.join('assets', 'fonts', 'Alien-Eclipse.ttf')
 
 
 class Game:
@@ -41,10 +46,10 @@ class Game:
         self.start = False
         self.title_part_a = "Space"
         self.title_part_b = "Soldier"
-        self.font_title = pygame.font.Font("assets/fonts/Alien-Eclipse.ttf", 90)
-        self.font_score_on_pause = pygame.font.Font("assets/fonts/Alien-Eclipse.ttf", 40)
-        self.font_score = pygame.font.Font("assets/fonts/Alien-Eclipse.ttf", 24)
-        self.info_autor_font = pygame.font.Font("assets/fonts/Alien-Eclipse.ttf", 18)
+        self.font_title = pygame.font.Font(font_path, 90)
+        self.font_score_on_pause = pygame.font.Font(font_path, 40)
+        self.font_score = pygame.font.Font(font_path, 24)
+        self.info_autor_font = pygame.font.Font(font_path, 18)
         self.score = 0
         self.draw_title_first_time = True
 

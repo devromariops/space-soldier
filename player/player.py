@@ -1,11 +1,16 @@
 import pygame
+import os
+
 from .player_bullet import PlayerBullet
+
+image_player_path = os.path.join('assets', 'sprites', 'space-ships', 'player.png')
+sound_player_fire_path = os.path.join('assets', 'sounds', 'player_fire.mp3')
 
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super(Player, self).__init__()
-        self.image = pygame.image.load("assets/sprites/space-ships/player.png").convert_alpha()
+        self.image = pygame.image.load(image_player_path).convert_alpha()
         self._rect = self.image.get_rect(center=(x, y))
 
     @property
@@ -25,7 +30,7 @@ class Player(pygame.sprite.Sprite):
         self.draw(screen_surface)
 
     def fire(self):
-        fire = pygame.mixer.Sound("assets/sounds/player_fire.mp3")
+        fire = pygame.mixer.Sound(sound_player_fire_path)
         fire.play()
         posx1, posx2 = -10, 10
         return [PlayerBullet(self.rect, posx1), PlayerBullet(self.rect, posx2)]

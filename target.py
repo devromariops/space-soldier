@@ -1,11 +1,15 @@
 import pygame
+import os
+
+image_target1_path = os.path.join('assets', 'sprites', 'aim', 'aim-circle.png')
+image_target2_path = os.path.join('assets', 'sprites', 'aim', 'aim-tri.png')
 
 
 class Target(pygame.sprite.Group):
     def __init__(self):
         super(Target, self).__init__()
-        self.target_surfaces = [pygame.image.load("assets/sprites/targets/target-circle.png"),
-                                pygame.image.load("assets/sprites/targets/target-tri.png")]
+        self.target_surfaces = [pygame.image.load(image_target1_path),
+                                pygame.image.load(image_target2_path)]
 
         self.targets = []
         for surface in self.target_surfaces:
