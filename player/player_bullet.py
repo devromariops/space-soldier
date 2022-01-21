@@ -1,8 +1,11 @@
 import pygame
 import os
 
+import utils
+
 image_bullet_standard_path = os.path.join('assets', 'sprites', 'space-bullets', 'player-bullet-standard.png')
 
+image_bullet_standard_path = utils.resource_path(image_bullet_standard_path)
 
 class PlayerBullet(pygame.sprite.Sprite):
     def __init__(self, player_rect, posx):

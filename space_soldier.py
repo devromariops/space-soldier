@@ -33,7 +33,7 @@ SCREEN_SURFACE = pygame.display.set_mode((utils.SCREEN_WIDTH, utils.SCREEN_HEIGH
 pygame.display.set_caption("Space Soldier")
 
 font_path = os.path.join('assets', 'fonts', 'Alien-Eclipse.ttf')
-
+font_path = utils.resource_path(font_path)
 
 class Game:
     def __init__(self):

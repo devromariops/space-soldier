@@ -2,10 +2,13 @@ import pygame
 import os
 
 from .player_bullet import PlayerBullet
+import utils
 
 image_player_path = os.path.join('assets', 'sprites', 'space-ships', 'player.png')
 sound_player_fire_path = os.path.join('assets', 'sounds', 'player_fire.mp3')
 
+image_player_path = utils.resource_path(image_player_path)
+sound_player_fire_path = utils.resource_path(sound_player_fire_path)
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):

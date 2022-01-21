@@ -10,6 +10,11 @@ image_nebulai1_path = os.path.join('assets', 'sprites', 'stars-nebulae', 'nebula
 image_nebulai2_path = os.path.join('assets', 'sprites', 'stars-nebulae', 'nebula2.png')
 image_nebulai3_path = os.path.join('assets', 'sprites', 'stars-nebulae', 'nebula3.png')
 
+image_blackspace_background_path = utils.resource_path(image_blackspace_background_path)
+image_stars_path = utils.resource_path(image_stars_path)
+image_nebulai1_path = utils.resource_path(image_nebulai1_path)
+image_nebulai2_path = utils.resource_path(image_nebulai2_path)
+image_nebulai3_path = utils.resource_path(image_nebulai3_path)
 
 class Background:
     def __init__(self):

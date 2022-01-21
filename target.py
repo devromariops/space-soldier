@@ -1,9 +1,13 @@
 import pygame
 import os
 
+import utils
+
 image_target1_path = os.path.join('assets', 'sprites', 'aim', 'aim-circle.png')
 image_target2_path = os.path.join('assets', 'sprites', 'aim', 'aim-tri.png')
 
+image_target1_path = utils.resource_path(image_target1_path)
+image_target2_path = utils.resource_path(image_target2_path)
 
 class Target(pygame.sprite.Group):
     def __init__(self):

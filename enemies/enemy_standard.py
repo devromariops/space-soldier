@@ -6,6 +6,8 @@ from enemies.enemy_standard_bullet import EnemyStandardBullet
 
 image_enemy_standard_path = os.path.join('assets', 'sprites', 'space-ships', 'enemy-standard.png')
 
+image_enemy_standard_path = utils.resource_path(image_enemy_standard_path)
+
 
 class EnemyStandard(pygame.sprite.Sprite):
     def __init__(self, midbottom_x, midbottom_y):

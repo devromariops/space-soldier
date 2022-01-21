@@ -2,8 +2,11 @@ import pygame
 from .player import Player
 import os
 
+import utils
+
 sound_player_death_path = os.path.join('assets', 'sounds', 'player_death.mp3')
 
+sound_player_death_path = utils.resource_path(sound_player_death_path)
 
 class PlayerManager:
     def __init__(self):

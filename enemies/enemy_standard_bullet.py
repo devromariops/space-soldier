@@ -5,6 +5,7 @@ import utils
 
 image_enemy_standard_bullet_path = os.path.join('assets', 'sprites', 'space-bullets', 'enemy-standard-bullet.png')
 
+image_enemy_standard_bullet_path = utils.resource_path(image_enemy_standard_bullet_path)
 
 class EnemyStandardBullet(pygame.sprite.Sprite):
     def __init__(self, enemy_stanard_rect, posx):

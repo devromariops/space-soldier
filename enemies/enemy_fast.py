@@ -1,3 +1,4 @@
+from re import U
 import pygame
 import random
 import os
@@ -7,6 +8,7 @@ from .enemy_fast_bullet import EnemyFastBullet
 
 image_enemy_speed_path = os.path.join('assets', 'sprites', 'space-ships', 'enemy-speed.png')
 
+image_enemy_speed_path = utils.resource_path(image_enemy_speed_path)
 
 class EnemyFast(pygame.sprite.Sprite):
     def __init__(self, midbottom_x, midbottom_y):

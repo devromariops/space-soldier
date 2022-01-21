@@ -5,6 +5,7 @@ import utils
 
 image_enemy_fast_bullet_path = os.path.join('assets', 'sprites', 'space-bullets', 'enemy-fast-bullet.png')
 
+image_enemy_fast_bullet_path = utils.resource_path(image_enemy_fast_bullet_path)
 
 class EnemyFastBullet(pygame.sprite.Sprite):
     def __init__(self, enemy_fast_rect):

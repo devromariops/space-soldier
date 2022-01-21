@@ -1,6 +1,8 @@
 import pygame
 import os
 
+import utils
+
 
 class EnemyExlosion(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -8,6 +10,7 @@ class EnemyExlosion(pygame.sprite.Sprite):
         self.sprites = []
         for _ in range(1, 17):
             file_name = os.path.join('assets', 'sprites', 'enemy-explosion',f'{_}.png')
+            file_name = utils.resource_path(file_name)
             self.sprites.append(pygame.image.load(file_name).convert_alpha())
 
         self.atual_sprite = 0

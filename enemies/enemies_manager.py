@@ -5,8 +5,12 @@ import os
 from .enemy_standard import EnemyStandard
 from .enemy_fast import EnemyFast
 from .enemy_explosion import EnemyExlosion
+import utils
 
 sound_enemy_death_path = os.path.join('assets', 'sounds', 'enemy_death.mp3')
+
+sound_enemy_death_path = utils.resource_path(sound_enemy_death_path)
+
 
 
 class EnemiesManager:
