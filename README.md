@@ -5,6 +5,6 @@
 
  pip install -r requirements.txt
 
- *bundler
+ *bundler onefile
 
  pyinstaller space_soldier.spec
